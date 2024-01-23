@@ -21,7 +21,7 @@ use InvalidArgumentException;
 class DotEnv
 {
     /**
-     * The directory where the .env file can be located.
+     * The directory where the ..env file can be located.
      *
      * @var string
      */
@@ -30,13 +30,13 @@ class DotEnv
     /**
      * Builds the path to our file.
      */
-    public function __construct(string $path, string $file = '.env')
+    public function __construct(string $path, string $file = '..env')
     {
         $this->path = rtrim($path, DIRECTORY_SEPARATOR) . DIRECTORY_SEPARATOR . $file;
     }
 
     /**
-     * The main entry point, will load the .env file and process it
+     * The main entry point, will load the ..env file and process it
      * so that we end up with all settings in the PHP environment vars
      * (i.e. getenv(), $_ENV, and $_SERVER)
      */
@@ -48,18 +48,18 @@ class DotEnv
     }
 
     /**
-     * Parse the .env file into an array of key => value
+     * Parse the ..env file into an array of key => value
      */
     public function parse(): ?array
     {
-        // We don't want to enforce the presence of a .env file, they should be optional.
+        // We don't want to enforce the presence of a ..env file, they should be optional.
         if (! is_file($this->path)) {
             return null;
         }
 
         // Ensure the file is readable
         if (! is_readable($this->path)) {
-            throw new InvalidArgumentException("The .env file is not readable: {$this->path}");
+            throw new InvalidArgumentException("The ..env file is not readable: {$this->path}");
         }
 
         $vars = [];
@@ -174,7 +174,7 @@ class DotEnv
 
             // Unquoted values cannot contain whitespace
             if (preg_match('/\s+/', $value) > 0) {
-                throw new InvalidArgumentException('.env values containing spaces must be surrounded by quotes.');
+                throw new InvalidArgumentException('..env values containing spaces must be surrounded by quotes.');
             }
         }
 

@@ -4,9 +4,9 @@ namespace App\Controllers;
 
 use App\Models\TableModel;
 
-class Home extends BaseController
+class Boards extends BaseController
 {
-    public function index()
+    public function getTable_main()
     {
         $table = new TableModel();
         $data['boards'] = $table->getBoards();
