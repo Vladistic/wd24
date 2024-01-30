@@ -1,5 +1,10 @@
 <div class="container">
     <legend>Spalten</legend>
+    <div>
+        <a class="btn btn-primary m-1" href="edit/0">
+            <i class="fa fa-plus"> Neu</i>
+        </a>
+    </div>
     <table class="table table-bordered ">
         <thead class="table-primary">
         <tr>
@@ -15,7 +20,7 @@
         <?php foreach ($spalten as $row): ?>
             <tr>
                 <td><?= $row['Id'] ?></td>
-                <td><?= $row['BoardsId'] ?></td>
+                <td><?= $row['Board'] ?></td>
                 <td><?= $row['SortId'] ?></td>
                 <td><?= $row['Spalte'] ?></td>
                 <td><?= $row['Spaltenbeschreibung'] ?></td>
@@ -23,10 +28,6 @@
                     <div>
                         <a href="edit/<?php echo $row['Id'] ?>">
                             <i class="fa fa-bars"> Bearbeiten</i>
-                        </a>
-                    </div>
-                    <div>
-                        <a href="delete">
                             <i class="fa fa-trash"> Löschen</i>
                         </a>
                     </div>

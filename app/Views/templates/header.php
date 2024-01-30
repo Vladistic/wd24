@@ -36,6 +36,9 @@
                 <li class="nav-item">
                     <a class="nav-link text-secondary" href="<?php echo base_url('spalten/spalten') ?>">Spalten</a>
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link text-secondary" href="<?php echo base_url('test/testing') ?>">test</a>
+                </li>
             </ul>
         </div>
     </nav>
