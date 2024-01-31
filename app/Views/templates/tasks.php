@@ -127,9 +127,10 @@
         <?php endforeach; ?>
 
         <div class="card-footer">
-            <button class="btn btn-primary" type="button" href="<?php echo base_url('tasks/todo')?>">
+
+            <a class="btn btn-primary" type="button" href="<?php echo base_url('tasks/todo')?>">
                 Neu
-            </button>
+            </a>
         </div>
     </div>
 

@@ -26,12 +26,16 @@ class TableModel extends Model
         $result=$this->db->query('SELECT spalten.*, boards.Board FROM spalten JOIN boards ON spalten.BoardsId = boards.Id');
         return $result->getResultArray();
     }
-    public function postSpalten_New()
+    public function postSpalten_edit()
     {
         $builder=$this->db->table('spalten');
-        //$this->spalten = $this->db->table('spalten');
-        //$this->spalten->insert($data);
-        $builder->set($_POST);
+        $builder->set('SortId',$_POST['sortId']);
+        $builder->set('Spalte',$_POST['spalte']);
+        $builder->set('Spaltenbeschreibung',$_POST['spaltenbeschreibung']);
+        $builder->where('Id',$_POST['Id']);
+        $builder->where('BoardsId', $_POST['boardsId']);
+        $builder->update();
+
     }
     public function delSpalte($id)
     {
@@ -51,6 +55,62 @@ class TableModel extends Model
         }
         return [];
 
+    }
+
+    public function postSpalten_New()
+    {
+        $builder=$this->db->table('spalten');
+        $builder->set('SortId',$_POST['sortId']);
+        $builder->set('Spalte',$_POST['spalte']);
+        $builder->set('Spaltenbeschreibung',$_POST['spaltenbeschreibung']);
+        $builder->set('BoardsId',$_POST['boardsId']);
+        $builder->insert();
+    }
+
+    public function postBoard_New()
+    {
+        $builder=$this->db->table('boards');
+        $builder->set('Board',$_POST['Board']);
+        $builder->insert();
+    }
+
+    public function postBoard_edit()
+    {
+        $builder=$this->db->table('boards');
+        $builder->set('Board',$_POST['Board']);
+        $builder->where('Id',$_POST['Id']);
+        $builder->update();
+
+    }
+
+    public function delBoard($id)
+    {
+        $cols=$this->getSpalten();
+
+        $builder=$this->db->table('tasks');
+
+        foreach ($cols as $col){
+            if ($col['BoardsId']==$id){
+                $builder->where('spaltenid', $col['Id']);
+            }
+        }
+        $builder->delete();
+        $builder=$this->db->table('spalten');
+        $builder->where('boardsId',$id);
+        $builder->delete();
+        $builder=$this->db->table('boards');
+        $builder->where('id',$id);
+        $builder->delete();
+    }
+
+    public function get1Board(int $id): ?array
+    {
+        if ($id !=0){
+            $sql="SELECT boards.* FROM boards WHERE boards.Id = ".$id;
+            $result=$this->db->query($sql);
+            return $result->getRowArray();
+        }
+        return [];
     }
 }
 

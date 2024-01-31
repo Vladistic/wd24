@@ -3,34 +3,50 @@
 echo '<hr>';
 //var_dump($spalten);
 echo '<hr>';
-//var_dump($boards);
+var_dump($boards);
 echo '<hr>';
 
 ?>
 <div class="container">
-    <form action="<?php echo base_url('spalten/edit')?>" method="post">
-    <div class="form-group row">
-
-        <div class="form-group col-sm-10">
-            <label for="id" class="col-sm-2 col-form-label">ID</label>
-            <input type="text" readonly class="form-control-plaintext" id="id" name="id" value="<?php
-            if (!empty($spalte)){
-                echo $spalte['Id'];
-            } else{
-                echo 0;
-            } ?>">
+    <form action="<?php
+    if (!empty($spalte)){
+        echo base_url('spalten/edit');
+    } else {
+        echo base_url('spalten/new');
+    }
+    ?>" method="post">
+        <div class="container">
+            <div class="form-group col-sm-10">
+                <label for="Id" class="col-sm-2 col-form-label">ID</label>
+                <input type="text" readonly class="form-control" id="Id" name="Id" value="<?php
+                if (!empty($spalte)){
+                    echo $spalte['Id'];
+                } else{
+                    echo 0;
+                } ?>">
+            </div>
         </div>
-    </div>
     <div class="container">
 
-        <div class="form-group col-sm-10">
-            <label for="boardsId" class="col-sm-2 col-form-label">Boards</label>
-            <input type="text" readonly class="form-control-plaintext" id="boardsId" name="boardsId" value="            <?php
+        <div class="form-group">
+            <label for="<?php
             if (!empty($spalte)){
-                echo $boards[$spalte['BoardsId']-1]['Board'];
+               echo $spalte['BoardsId'];
             } else{
                 echo 0;
-            } ?>">
+            }
+            ?>">Boards</label>
+            <select class="form-control" id="<?php
+            if (!empty($spalte)){
+                echo $spalte['BoardsId'];
+            } else{
+                echo 0;
+            }
+            ?>" name="boardsId">
+                <?php foreach ($boards as $item): ?>
+                    <option><?= $item['Id']?></option>
+                <?php endforeach; ?>
+            </select>
         </div>
     </div>
     <div class="container">

@@ -1,0 +1,835 @@
+CRITICAL - 2024-01-31 12:02:20 --> ErrorException: Undefined array key "Id"
+in APPPATH\Controllers\Spalten.php on line 39.
+ 1 APPPATH\Controllers\Spalten.php(39): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "Id"', 'C:\\xampp\\htdocs\\wd24\\app\\Controllers\\Spalten.php', 39)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Spalten->postEdit()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Spalten))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-01-31 12:09:18 --> mysqli_sql_exception: Duplicate entry '3' for key 'PRIMARY' in C:\xampp\htdocs\wd24\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\wd24\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `sp...', 0)
+#1 C:\xampp\htdocs\wd24\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `sp...')
+#2 C:\xampp\htdocs\wd24\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `sp...')
+#3 C:\xampp\htdocs\wd24\system\Database\BaseBuilder.php(2302): CodeIgniter\Database\BaseConnection->query('INSERT INTO `sp...', Array, false)
+#4 C:\xampp\htdocs\wd24\app\Models\TableModel.php(33): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 C:\xampp\htdocs\wd24\app\Controllers\Spalten.php(38): App\Models\TableModel->postSpalten_New()
+#6 C:\xampp\htdocs\wd24\system\CodeIgniter.php(941): App\Controllers\Spalten->postEdit()
+#7 C:\xampp\htdocs\wd24\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Spalten))
+#8 C:\xampp\htdocs\wd24\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\wd24\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2024-01-31 12:09:18 --> CodeIgniter\Database\Exceptions\DatabaseException: Duplicate entry '3' for key 'PRIMARY'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2302): CodeIgniter\Database\BaseConnection->query('INSERT INTO `spalten` (`id`, `boardsId`, `sortId`, `spalte`, `spaltenbeschreibung`) VALUES (:id:, :boardsId:, :sortId:, :spalte:, :spaltenbeschreibung:)', [...], false)
+ 2 APPPATH\Models\TableModel.php(33): CodeIgniter\Database\BaseBuilder->insert([...])
+ 3 APPPATH\Controllers\Spalten.php(38): App\Models\TableModel->postSpalten_New()
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Spalten->postEdit()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Spalten))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-01-31 12:09:18 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Duplicate entry '3' for key 'PRIMARY'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `spalten` (`id`, `boardsId`, `sortId`, `spalte`, `spaltenbeschreibung`) VALUES (\'3\', \'            Main\', \'3\', \'Ist Erledigt32\', \'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec placerat accumsan erat, non auctor ipsum sollicitudin id. Duis accumsan purus nec justo dictum eleifend.            \')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `spalten` (`id`, `boardsId`, `sortId`, `spalte`, `spaltenbeschreibung`) VALUES (\'3\', \'            Main\', \'3\', \'Ist Erledigt32\', \'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec placerat accumsan erat, non auctor ipsum sollicitudin id. Duis accumsan purus nec justo dictum eleifend.            \')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2302): CodeIgniter\Database\BaseConnection->query('INSERT INTO `spalten` (`id`, `boardsId`, `sortId`, `spalte`, `spaltenbeschreibung`) VALUES (:id:, :boardsId:, :sortId:, :spalte:, :spaltenbeschreibung:)', [...], false)
+ 4 APPPATH\Models\TableModel.php(33): CodeIgniter\Database\BaseBuilder->insert([...])
+ 5 APPPATH\Controllers\Spalten.php(38): App\Models\TableModel->postSpalten_New()
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Spalten->postEdit()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Spalten))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-01-31 12:09:18 --> [Caused by] mysqli_sql_exception: Duplicate entry '3' for key 'PRIMARY'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `spalten` (`id`, `boardsId`, `sortId`, `spalte`, `spaltenbeschreibung`) VALUES (\'3\', \'            Main\', \'3\', \'Ist Erledigt32\', \'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec placerat accumsan erat, non auctor ipsum sollicitudin id. Duis accumsan purus nec justo dictum eleifend.            \')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `spalten` (`id`, `boardsId`, `sortId`, `spalte`, `spaltenbeschreibung`) VALUES (\'3\', \'            Main\', \'3\', \'Ist Erledigt32\', \'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec placerat accumsan erat, non auctor ipsum sollicitudin id. Duis accumsan purus nec justo dictum eleifend.            \')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `spalten` (`id`, `boardsId`, `sortId`, `spalte`, `spaltenbeschreibung`) VALUES (\'3\', \'            Main\', \'3\', \'Ist Erledigt32\', \'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec placerat accumsan erat, non auctor ipsum sollicitudin id. Duis accumsan purus nec justo dictum eleifend.            \')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2302): CodeIgniter\Database\BaseConnection->query('INSERT INTO `spalten` (`id`, `boardsId`, `sortId`, `spalte`, `spaltenbeschreibung`) VALUES (:id:, :boardsId:, :sortId:, :spalte:, :spaltenbeschreibung:)', [...], false)
+ 5 APPPATH\Models\TableModel.php(33): CodeIgniter\Database\BaseBuilder->insert([...])
+ 6 APPPATH\Controllers\Spalten.php(38): App\Models\TableModel->postSpalten_New()
+ 7 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Spalten->postEdit()
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Spalten))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-01-31 12:10:40 --> mysqli_sql_exception: Duplicate entry '3' for key 'PRIMARY' in C:\xampp\htdocs\wd24\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\wd24\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `sp...', 0)
+#1 C:\xampp\htdocs\wd24\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `sp...')
+#2 C:\xampp\htdocs\wd24\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `sp...')
+#3 C:\xampp\htdocs\wd24\system\Database\BaseBuilder.php(2302): CodeIgniter\Database\BaseConnection->query('INSERT INTO `sp...', Array, false)
+#4 C:\xampp\htdocs\wd24\app\Models\TableModel.php(34): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 C:\xampp\htdocs\wd24\app\Controllers\Spalten.php(38): App\Models\TableModel->postSpalten_New()
+#6 C:\xampp\htdocs\wd24\system\CodeIgniter.php(941): App\Controllers\Spalten->postEdit()
+#7 C:\xampp\htdocs\wd24\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Spalten))
+#8 C:\xampp\htdocs\wd24\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\wd24\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2024-01-31 12:10:40 --> CodeIgniter\Database\Exceptions\DatabaseException: Duplicate entry '3' for key 'PRIMARY'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2302): CodeIgniter\Database\BaseConnection->query('INSERT INTO `spalten` (`id`, `boardsId`, `sortId`, `spalte`, `spaltenbeschreibung`) VALUES (:id:, :boardsId:, :sortId:, :spalte:, :spaltenbeschreibung:)', [...], false)
+ 2 APPPATH\Models\TableModel.php(34): CodeIgniter\Database\BaseBuilder->insert([...])
+ 3 APPPATH\Controllers\Spalten.php(38): App\Models\TableModel->postSpalten_New()
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Spalten->postEdit()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Spalten))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-01-31 12:10:40 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Duplicate entry '3' for key 'PRIMARY'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `spalten` (`id`, `boardsId`, `sortId`, `spalte`, `spaltenbeschreibung`) VALUES (\'3\', \'            Main\', \'3\', \'Ist Erledigt32\', \'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec placerat accumsan erat, non auctor ipsum sollicitudin id. Duis accumsan purus nec justo dictum eleifend.            \')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `spalten` (`id`, `boardsId`, `sortId`, `spalte`, `spaltenbeschreibung`) VALUES (\'3\', \'            Main\', \'3\', \'Ist Erledigt32\', \'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec placerat accumsan erat, non auctor ipsum sollicitudin id. Duis accumsan purus nec justo dictum eleifend.            \')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2302): CodeIgniter\Database\BaseConnection->query('INSERT INTO `spalten` (`id`, `boardsId`, `sortId`, `spalte`, `spaltenbeschreibung`) VALUES (:id:, :boardsId:, :sortId:, :spalte:, :spaltenbeschreibung:)', [...], false)
+ 4 APPPATH\Models\TableModel.php(34): CodeIgniter\Database\BaseBuilder->insert([...])
+ 5 APPPATH\Controllers\Spalten.php(38): App\Models\TableModel->postSpalten_New()
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Spalten->postEdit()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Spalten))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-01-31 12:10:40 --> [Caused by] mysqli_sql_exception: Duplicate entry '3' for key 'PRIMARY'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `spalten` (`id`, `boardsId`, `sortId`, `spalte`, `spaltenbeschreibung`) VALUES (\'3\', \'            Main\', \'3\', \'Ist Erledigt32\', \'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec placerat accumsan erat, non auctor ipsum sollicitudin id. Duis accumsan purus nec justo dictum eleifend.            \')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `spalten` (`id`, `boardsId`, `sortId`, `spalte`, `spaltenbeschreibung`) VALUES (\'3\', \'            Main\', \'3\', \'Ist Erledigt32\', \'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec placerat accumsan erat, non auctor ipsum sollicitudin id. Duis accumsan purus nec justo dictum eleifend.            \')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `spalten` (`id`, `boardsId`, `sortId`, `spalte`, `spaltenbeschreibung`) VALUES (\'3\', \'            Main\', \'3\', \'Ist Erledigt32\', \'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec placerat accumsan erat, non auctor ipsum sollicitudin id. Duis accumsan purus nec justo dictum eleifend.            \')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2302): CodeIgniter\Database\BaseConnection->query('INSERT INTO `spalten` (`id`, `boardsId`, `sortId`, `spalte`, `spaltenbeschreibung`) VALUES (:id:, :boardsId:, :sortId:, :spalte:, :spaltenbeschreibung:)', [...], false)
+ 5 APPPATH\Models\TableModel.php(34): CodeIgniter\Database\BaseBuilder->insert([...])
+ 6 APPPATH\Controllers\Spalten.php(38): App\Models\TableModel->postSpalten_New()
+ 7 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Spalten->postEdit()
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Spalten))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-01-31 12:18:47 --> ErrorException: Undefined array key ""
+in APPPATH\Views\templates\ced.php on line 23.
+ 1 APPPATH\Views\templates\ced.php(23): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key ""', 'C:\\xampp\\htdocs\\wd24\\app\\Views\\templates\\ced.php', 23)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\wd24\\app\\Views\\templates\\ced.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('templates/ced', [], true)
+ 5 APPPATH\Controllers\Spalten.php(26): view('templates/ced', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Spalten->getEdit(3)
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Spalten))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-01-31 12:28:12 --> ErrorException: Undefined array key "Board"
+in APPPATH\Views\templates\ced.php on line 17.
+ 1 APPPATH\Views\templates\ced.php(17): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "Board"', 'C:\\xampp\\htdocs\\wd24\\app\\Views\\templates\\ced.php', 17)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\wd24\\app\\Views\\templates\\ced.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('templates/ced', [], true)
+ 5 APPPATH\Controllers\Spalten.php(26): view('templates/ced', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Spalten->getEdit(4)
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Spalten))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-01-31 12:30:32 --> ErrorException: Undefined array key "boardsId"
+in APPPATH\Views\templates\ced.php on line 17.
+ 1 APPPATH\Views\templates\ced.php(17): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "boardsId"', 'C:\\xampp\\htdocs\\wd24\\app\\Views\\templates\\ced.php', 17)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\wd24\\app\\Views\\templates\\ced.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('templates/ced', [], true)
+ 5 APPPATH\Controllers\Spalten.php(26): view('templates/ced', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Spalten->getEdit(3)
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Spalten))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-01-31 12:50:35 --> ErrorException: Undefined array key "boardsId"
+in APPPATH\Views\templates\ced.php on line 16.
+ 1 APPPATH\Views\templates\ced.php(16): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "boardsId"', 'C:\\xampp\\htdocs\\wd24\\app\\Views\\templates\\ced.php', 16)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\wd24\\app\\Views\\templates\\ced.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('templates/ced', [], true)
+ 5 APPPATH\Controllers\Spalten.php(26): view('templates/ced', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Spalten->getEdit(4)
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Spalten))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-01-31 12:50:52 --> ErrorException: Undefined array key "boardsId"
+in APPPATH\Views\templates\ced.php on line 16.
+ 1 APPPATH\Views\templates\ced.php(16): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "boardsId"', 'C:\\xampp\\htdocs\\wd24\\app\\Views\\templates\\ced.php', 16)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\wd24\\app\\Views\\templates\\ced.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('templates/ced', [], true)
+ 5 APPPATH\Controllers\Spalten.php(26): view('templates/ced', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Spalten->getEdit(4)
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Spalten))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-01-31 12:51:01 --> ErrorException: Undefined array key "boardsId"
+in APPPATH\Views\templates\ced.php on line 16.
+ 1 APPPATH\Views\templates\ced.php(16): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "boardsId"', 'C:\\xampp\\htdocs\\wd24\\app\\Views\\templates\\ced.php', 16)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\wd24\\app\\Views\\templates\\ced.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('templates/ced', [], true)
+ 5 APPPATH\Controllers\Spalten.php(26): view('templates/ced', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Spalten->getEdit(4)
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Spalten))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-01-31 12:51:10 --> ErrorException: Undefined array key 2
+in APPPATH\Views\templates\ced.php on line 16.
+ 1 APPPATH\Views\templates\ced.php(16): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 2', 'C:\\xampp\\htdocs\\wd24\\app\\Views\\templates\\ced.php', 16)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\wd24\\app\\Views\\templates\\ced.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('templates/ced', [], true)
+ 5 APPPATH\Controllers\Spalten.php(26): view('templates/ced', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Spalten->getEdit(4)
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Spalten))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-01-31 12:51:46 --> ErrorException: Undefined array key "Board"
+in APPPATH\Views\templates\ced.php on line 16.
+ 1 APPPATH\Views\templates\ced.php(16): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "Board"', 'C:\\xampp\\htdocs\\wd24\\app\\Views\\templates\\ced.php', 16)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\wd24\\app\\Views\\templates\\ced.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('templates/ced', [], true)
+ 5 APPPATH\Controllers\Spalten.php(26): view('templates/ced', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Spalten->getEdit(4)
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Spalten))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-01-31 12:52:06 --> ErrorException: Undefined array key "Id"
+in APPPATH\Views\templates\ced.php on line 16.
+ 1 APPPATH\Views\templates\ced.php(16): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "Id"', 'C:\\xampp\\htdocs\\wd24\\app\\Views\\templates\\ced.php', 16)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\wd24\\app\\Views\\templates\\ced.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('templates/ced', [], true)
+ 5 APPPATH\Controllers\Spalten.php(26): view('templates/ced', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Spalten->getEdit(4)
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Spalten))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-01-31 12:52:13 --> ErrorException: Undefined array key "id"
+in APPPATH\Views\templates\ced.php on line 16.
+ 1 APPPATH\Views\templates\ced.php(16): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id"', 'C:\\xampp\\htdocs\\wd24\\app\\Views\\templates\\ced.php', 16)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\wd24\\app\\Views\\templates\\ced.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('templates/ced', [], true)
+ 5 APPPATH\Controllers\Spalten.php(26): view('templates/ced', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Spalten->getEdit(4)
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Spalten))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-01-31 12:56:49 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`db_team18`.`spalten`, CONSTRAINT `BoardsIdConstraint` FOREIGN KEY (`BoardsId`) REFERENCES `boards` (`Id`)) in C:\xampp\htdocs\wd24\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\wd24\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `sp...', 0)
+#1 C:\xampp\htdocs\wd24\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `sp...')
+#2 C:\xampp\htdocs\wd24\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `sp...')
+#3 C:\xampp\htdocs\wd24\system\Database\BaseBuilder.php(2302): CodeIgniter\Database\BaseConnection->query('INSERT INTO `sp...', Array, false)
+#4 C:\xampp\htdocs\wd24\app\Models\TableModel.php(34): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 C:\xampp\htdocs\wd24\app\Controllers\Spalten.php(38): App\Models\TableModel->postSpalten_New()
+#6 C:\xampp\htdocs\wd24\system\CodeIgniter.php(941): App\Controllers\Spalten->postEdit()
+#7 C:\xampp\htdocs\wd24\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Spalten))
+#8 C:\xampp\htdocs\wd24\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\wd24\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2024-01-31 12:56:49 --> CodeIgniter\Database\Exceptions\DatabaseException: Cannot add or update a child row: a foreign key constraint fails (`db_team18`.`spalten`, CONSTRAINT `BoardsIdConstraint` FOREIGN KEY (`BoardsId`) REFERENCES `boards` (`Id`))
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2302): CodeIgniter\Database\BaseConnection->query('INSERT INTO `spalten` (`sortId`, `spalte`, `spaltenbeschreibung`) VALUES (:sortId:, :spalte:, :spaltenbeschreibung:)', [...], false)
+ 2 APPPATH\Models\TableModel.php(34): CodeIgniter\Database\BaseBuilder->insert([...])
+ 3 APPPATH\Controllers\Spalten.php(38): App\Models\TableModel->postSpalten_New()
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Spalten->postEdit()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Spalten))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-01-31 12:56:49 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Cannot add or update a child row: a foreign key constraint fails (`db_team18`.`spalten`, CONSTRAINT `BoardsIdConstraint` FOREIGN KEY (`BoardsId`) REFERENCES `boards` (`Id`))
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `spalten` (`sortId`, `spalte`, `spaltenbeschreibung`) VALUES (\'5\', \'Anderes4\', \'Zeugs          44444444  \')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `spalten` (`sortId`, `spalte`, `spaltenbeschreibung`) VALUES (\'5\', \'Anderes4\', \'Zeugs          44444444  \')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2302): CodeIgniter\Database\BaseConnection->query('INSERT INTO `spalten` (`sortId`, `spalte`, `spaltenbeschreibung`) VALUES (:sortId:, :spalte:, :spaltenbeschreibung:)', [...], false)
+ 4 APPPATH\Models\TableModel.php(34): CodeIgniter\Database\BaseBuilder->insert([...])
+ 5 APPPATH\Controllers\Spalten.php(38): App\Models\TableModel->postSpalten_New()
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Spalten->postEdit()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Spalten))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-01-31 12:56:49 --> [Caused by] mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`db_team18`.`spalten`, CONSTRAINT `BoardsIdConstraint` FOREIGN KEY (`BoardsId`) REFERENCES `boards` (`Id`))
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `spalten` (`sortId`, `spalte`, `spaltenbeschreibung`) VALUES (\'5\', \'Anderes4\', \'Zeugs          44444444  \')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `spalten` (`sortId`, `spalte`, `spaltenbeschreibung`) VALUES (\'5\', \'Anderes4\', \'Zeugs          44444444  \')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `spalten` (`sortId`, `spalte`, `spaltenbeschreibung`) VALUES (\'5\', \'Anderes4\', \'Zeugs          44444444  \')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2302): CodeIgniter\Database\BaseConnection->query('INSERT INTO `spalten` (`sortId`, `spalte`, `spaltenbeschreibung`) VALUES (:sortId:, :spalte:, :spaltenbeschreibung:)', [...], false)
+ 5 APPPATH\Models\TableModel.php(34): CodeIgniter\Database\BaseBuilder->insert([...])
+ 6 APPPATH\Controllers\Spalten.php(38): App\Models\TableModel->postSpalten_New()
+ 7 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Spalten->postEdit()
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Spalten))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-01-31 12:59:12 --> ErrorException: Undefined array key "id"
+in APPPATH\Controllers\Spalten.php on line 42.
+ 1 APPPATH\Controllers\Spalten.php(42): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id"', 'C:\\xampp\\htdocs\\wd24\\app\\Controllers\\Spalten.php', 42)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Spalten->postEdit()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Spalten))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-01-31 12:59:29 --> ErrorException: Undefined array key "boardsId"
+in APPPATH\Controllers\Spalten.php on line 43.
+ 1 APPPATH\Controllers\Spalten.php(43): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "boardsId"', 'C:\\xampp\\htdocs\\wd24\\app\\Controllers\\Spalten.php', 43)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Spalten->postEdit()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Spalten))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-01-31 12:59:57 --> ErrorException: Undefined array key "BoardsId"
+in APPPATH\Controllers\Spalten.php on line 43.
+ 1 APPPATH\Controllers\Spalten.php(43): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "BoardsId"', 'C:\\xampp\\htdocs\\wd24\\app\\Controllers\\Spalten.php', 43)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Spalten->postEdit()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Spalten))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-01-31 13:00:08 --> ErrorException: Undefined array key "SortId"
+in APPPATH\Controllers\Spalten.php on line 44.
+ 1 APPPATH\Controllers\Spalten.php(44): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "SortId"', 'C:\\xampp\\htdocs\\wd24\\app\\Controllers\\Spalten.php', 44)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Spalten->postEdit()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Spalten))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-01-31 13:00:26 --> ErrorException: Undefined variable $boardsId
+in APPPATH\Controllers\Spalten.php on line 50.
+ 1 APPPATH\Controllers\Spalten.php(50): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $boardsId', 'C:\\xampp\\htdocs\\wd24\\app\\Controllers\\Spalten.php', 50)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Spalten->postEdit()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Spalten))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-01-31 13:01:01 --> ErrorException: Undefined variable $boardsId
+in APPPATH\Controllers\Spalten.php on line 50.
+ 1 APPPATH\Controllers\Spalten.php(50): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $boardsId', 'C:\\xampp\\htdocs\\wd24\\app\\Controllers\\Spalten.php', 50)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Spalten->postEdit()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Spalten))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-01-31 13:01:14 --> ErrorException: Undefined variable $boardsId
+in APPPATH\Controllers\Spalten.php on line 50.
+ 1 APPPATH\Controllers\Spalten.php(50): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $boardsId', 'C:\\xampp\\htdocs\\wd24\\app\\Controllers\\Spalten.php', 50)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Spalten->postEdit()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Spalten))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-01-31 13:12:53 --> ParseError: syntax error, unexpected token ","
+in APPPATH\Models\TableModel.php on line 34.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(288): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs\\wd24\\app\\Models\\TableModel.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(266): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Models\\TableModel')
+ 3 APPPATH\Controllers\Spalten.php(20): CodeIgniter\Autoloader\Autoloader->loadClass('App\\Models\\TableModel')
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Spalten->getEdit(4)
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Spalten))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-01-31 13:25:04 --> ErrorException: Undefined array key "id"
+in APPPATH\Controllers\Spalten.php on line 42.
+ 1 APPPATH\Controllers\Spalten.php(42): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id"', 'C:\\xampp\\htdocs\\wd24\\app\\Controllers\\Spalten.php', 42)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Spalten->postEdit()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Spalten))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-01-31 13:25:58 --> ErrorException: Undefined array key "id"
+in APPPATH\Controllers\Spalten.php on line 42.
+ 1 APPPATH\Controllers\Spalten.php(42): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id"', 'C:\\xampp\\htdocs\\wd24\\app\\Controllers\\Spalten.php', 42)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Spalten->postEdit()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Spalten))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-01-31 13:28:48 --> ErrorException: Undefined array key "id"
+in APPPATH\Controllers\Spalten.php on line 42.
+ 1 APPPATH\Controllers\Spalten.php(42): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id"', 'C:\\xampp\\htdocs\\wd24\\app\\Controllers\\Spalten.php', 42)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Spalten->postEdit()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Spalten))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-01-31 13:29:20 --> ErrorException: Undefined array key "id"
+in APPPATH\Views\templates\ced.php on line 14.
+ 1 APPPATH\Views\templates\ced.php(14): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id"', 'C:\\xampp\\htdocs\\wd24\\app\\Views\\templates\\ced.php', 14)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\wd24\\app\\Views\\templates\\ced.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('templates/ced', [], true)
+ 5 APPPATH\Controllers\Spalten.php(26): view('templates/ced', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Spalten->getEdit(4)
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Spalten))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-01-31 13:35:57 --> ErrorException: Undefined array key "id"
+in APPPATH\Controllers\Spalten.php on line 42.
+ 1 APPPATH\Controllers\Spalten.php(42): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id"', 'C:\\xampp\\htdocs\\wd24\\app\\Controllers\\Spalten.php', 42)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Spalten->postEdit()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Spalten))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-01-31 15:56:31 --> ErrorException: Undefined array key "id"
+in APPPATH\Models\TableModel.php on line 37.
+ 1 APPPATH\Models\TableModel.php(37): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id"', 'C:\\xampp\\htdocs\\wd24\\app\\Models\\TableModel.php', 37)
+ 2 APPPATH\Controllers\Spalten.php(38): App\Models\TableModel->postSpalten_New()
+ 3 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Spalten->postEdit()
+ 4 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Spalten))
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-01-31 15:56:51 --> ErrorException: Undefined array key "boardsId"
+in APPPATH\Models\TableModel.php on line 38.
+ 1 APPPATH\Models\TableModel.php(38): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "boardsId"', 'C:\\xampp\\htdocs\\wd24\\app\\Models\\TableModel.php', 38)
+ 2 APPPATH\Controllers\Spalten.php(38): App\Models\TableModel->postSpalten_New()
+ 3 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Spalten->postEdit()
+ 4 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Spalten))
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-01-31 15:57:04 --> ErrorException: Undefined array key "BoardsId"
+in APPPATH\Models\TableModel.php on line 38.
+ 1 APPPATH\Models\TableModel.php(38): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "BoardsId"', 'C:\\xampp\\htdocs\\wd24\\app\\Models\\TableModel.php', 38)
+ 2 APPPATH\Controllers\Spalten.php(38): App\Models\TableModel->postSpalten_New()
+ 3 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Spalten->postEdit()
+ 4 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Spalten))
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-01-31 16:06:19 --> ErrorException: Undefined array key "BoardsId"
+in APPPATH\Controllers\Spalten.php on line 43.
+ 1 APPPATH\Controllers\Spalten.php(43): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "BoardsId"', 'C:\\xampp\\htdocs\\wd24\\app\\Controllers\\Spalten.php', 43)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Spalten->postEdit()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Spalten))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-01-31 16:06:37 --> ErrorException: Undefined array key "BoardsId"
+in APPPATH\Controllers\Spalten.php on line 43.
+ 1 APPPATH\Controllers\Spalten.php(43): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "BoardsId"', 'C:\\xampp\\htdocs\\wd24\\app\\Controllers\\Spalten.php', 43)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Spalten->postEdit()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Spalten))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-01-31 16:07:05 --> ErrorException: Undefined array key "boardsId"
+in APPPATH\Controllers\Spalten.php on line 43.
+ 1 APPPATH\Controllers\Spalten.php(43): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "boardsId"', 'C:\\xampp\\htdocs\\wd24\\app\\Controllers\\Spalten.php', 43)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Spalten->postEdit()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Spalten))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-01-31 16:07:19 --> ErrorException: Undefined array key "boardsId"
+in APPPATH\Controllers\Spalten.php on line 43.
+ 1 APPPATH\Controllers\Spalten.php(43): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "boardsId"', 'C:\\xampp\\htdocs\\wd24\\app\\Controllers\\Spalten.php', 43)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Spalten->postEdit()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Spalten))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-01-31 16:18:29 --> ErrorException: Undefined array key "boardId"
+in APPPATH\Models\TableModel.php on line 38.
+ 1 APPPATH\Models\TableModel.php(38): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "boardId"', 'C:\\xampp\\htdocs\\wd24\\app\\Models\\TableModel.php', 38)
+ 2 APPPATH\Controllers\Spalten.php(38): App\Models\TableModel->postSpalten_New()
+ 3 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Spalten->postEdit()
+ 4 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Spalten))
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-01-31 16:20:01 --> mysqli_sql_exception: Unknown column 'Main' in 'where clause' in C:\xampp\htdocs\wd24\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\wd24\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT boards.I...', 0)
+#1 C:\xampp\htdocs\wd24\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT boards.I...')
+#2 C:\xampp\htdocs\wd24\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT boards.I...')
+#3 C:\xampp\htdocs\wd24\app\Models\TableModel.php(39): CodeIgniter\Database\BaseConnection->query('SELECT boards.I...')
+#4 C:\xampp\htdocs\wd24\app\Controllers\Spalten.php(38): App\Models\TableModel->postSpalten_New()
+#5 C:\xampp\htdocs\wd24\system\CodeIgniter.php(941): App\Controllers\Spalten->postEdit()
+#6 C:\xampp\htdocs\wd24\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Spalten))
+#7 C:\xampp\htdocs\wd24\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\wd24\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2024-01-31 16:20:01 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'Main' in 'where clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 APPPATH\Models\TableModel.php(39): CodeIgniter\Database\BaseConnection->query('SELECT boards.Id FROM boards WHERE boards.Board=Main')
+ 2 APPPATH\Controllers\Spalten.php(38): App\Models\TableModel->postSpalten_New()
+ 3 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Spalten->postEdit()
+ 4 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Spalten))
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-01-31 16:20:01 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'Main' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT boards.Id FROM boards WHERE boards.Board=Main')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT boards.Id FROM boards WHERE boards.Board=Main')
+ 3 APPPATH\Models\TableModel.php(39): CodeIgniter\Database\BaseConnection->query('SELECT boards.Id FROM boards WHERE boards.Board=Main')
+ 4 APPPATH\Controllers\Spalten.php(38): App\Models\TableModel->postSpalten_New()
+ 5 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Spalten->postEdit()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Spalten))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-01-31 16:20:01 --> [Caused by] mysqli_sql_exception: Unknown column 'Main' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT boards.Id FROM boards WHERE boards.Board=Main', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT boards.Id FROM boards WHERE boards.Board=Main')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT boards.Id FROM boards WHERE boards.Board=Main')
+ 4 APPPATH\Models\TableModel.php(39): CodeIgniter\Database\BaseConnection->query('SELECT boards.Id FROM boards WHERE boards.Board=Main')
+ 5 APPPATH\Controllers\Spalten.php(38): App\Models\TableModel->postSpalten_New()
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Spalten->postEdit()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Spalten))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-01-31 16:21:38 --> mysqli_sql_exception: Unknown column 'Main' in 'where clause' in C:\xampp\htdocs\wd24\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\wd24\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT boards.I...', 0)
+#1 C:\xampp\htdocs\wd24\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT boards.I...')
+#2 C:\xampp\htdocs\wd24\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT boards.I...')
+#3 C:\xampp\htdocs\wd24\app\Models\TableModel.php(39): CodeIgniter\Database\BaseConnection->query('SELECT boards.I...')
+#4 C:\xampp\htdocs\wd24\app\Controllers\Spalten.php(38): App\Models\TableModel->postSpalten_New()
+#5 C:\xampp\htdocs\wd24\system\CodeIgniter.php(941): App\Controllers\Spalten->postEdit()
+#6 C:\xampp\htdocs\wd24\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Spalten))
+#7 C:\xampp\htdocs\wd24\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\wd24\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2024-01-31 16:21:38 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'Main' in 'where clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 APPPATH\Models\TableModel.php(39): CodeIgniter\Database\BaseConnection->query('SELECT boards.Id FROM boards WHERE boards.Board=Main')
+ 2 APPPATH\Controllers\Spalten.php(38): App\Models\TableModel->postSpalten_New()
+ 3 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Spalten->postEdit()
+ 4 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Spalten))
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-01-31 16:21:38 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'Main' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT boards.Id FROM boards WHERE boards.Board=Main')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT boards.Id FROM boards WHERE boards.Board=Main')
+ 3 APPPATH\Models\TableModel.php(39): CodeIgniter\Database\BaseConnection->query('SELECT boards.Id FROM boards WHERE boards.Board=Main')
+ 4 APPPATH\Controllers\Spalten.php(38): App\Models\TableModel->postSpalten_New()
+ 5 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Spalten->postEdit()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Spalten))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-01-31 16:21:38 --> [Caused by] mysqli_sql_exception: Unknown column 'Main' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT boards.Id FROM boards WHERE boards.Board=Main', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT boards.Id FROM boards WHERE boards.Board=Main')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT boards.Id FROM boards WHERE boards.Board=Main')
+ 4 APPPATH\Models\TableModel.php(39): CodeIgniter\Database\BaseConnection->query('SELECT boards.Id FROM boards WHERE boards.Board=Main')
+ 5 APPPATH\Controllers\Spalten.php(38): App\Models\TableModel->postSpalten_New()
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Spalten->postEdit()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Spalten))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-01-31 16:23:15 --> mysqli_sql_exception: Unknown column 'Main' in 'where clause' in C:\xampp\htdocs\wd24\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\wd24\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT boards.I...', 0)
+#1 C:\xampp\htdocs\wd24\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT boards.I...')
+#2 C:\xampp\htdocs\wd24\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT boards.I...')
+#3 C:\xampp\htdocs\wd24\app\Models\TableModel.php(39): CodeIgniter\Database\BaseConnection->query('SELECT boards.I...')
+#4 C:\xampp\htdocs\wd24\app\Controllers\Spalten.php(38): App\Models\TableModel->postSpalten_New()
+#5 C:\xampp\htdocs\wd24\system\CodeIgniter.php(941): App\Controllers\Spalten->postEdit()
+#6 C:\xampp\htdocs\wd24\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Spalten))
+#7 C:\xampp\htdocs\wd24\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\wd24\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2024-01-31 16:23:15 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'Main' in 'where clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 APPPATH\Models\TableModel.php(39): CodeIgniter\Database\BaseConnection->query('SELECT boards.Id FROM boards WHERE boards.Board=Main')
+ 2 APPPATH\Controllers\Spalten.php(38): App\Models\TableModel->postSpalten_New()
+ 3 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Spalten->postEdit()
+ 4 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Spalten))
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-01-31 16:23:15 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'Main' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT boards.Id FROM boards WHERE boards.Board=Main')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT boards.Id FROM boards WHERE boards.Board=Main')
+ 3 APPPATH\Models\TableModel.php(39): CodeIgniter\Database\BaseConnection->query('SELECT boards.Id FROM boards WHERE boards.Board=Main')
+ 4 APPPATH\Controllers\Spalten.php(38): App\Models\TableModel->postSpalten_New()
+ 5 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Spalten->postEdit()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Spalten))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-01-31 16:23:15 --> [Caused by] mysqli_sql_exception: Unknown column 'Main' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT boards.Id FROM boards WHERE boards.Board=Main', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT boards.Id FROM boards WHERE boards.Board=Main')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT boards.Id FROM boards WHERE boards.Board=Main')
+ 4 APPPATH\Models\TableModel.php(39): CodeIgniter\Database\BaseConnection->query('SELECT boards.Id FROM boards WHERE boards.Board=Main')
+ 5 APPPATH\Controllers\Spalten.php(38): App\Models\TableModel->postSpalten_New()
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Spalten->postEdit()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Spalten))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-01-31 16:30:34 --> ErrorException: Undefined array key "BoardsId"
+in APPPATH\Views\templates\ced.php on line 26.
+ 1 APPPATH\Views\templates\ced.php(26): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "BoardsId"', 'C:\\xampp\\htdocs\\wd24\\app\\Views\\templates\\ced.php', 26)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\wd24\\app\\Views\\templates\\ced.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('templates/ced', [], true)
+ 5 APPPATH\Controllers\Spalten.php(26): view('templates/ced', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Spalten->getEdit(0)
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Spalten))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-01-31 16:44:06 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`db_team18`.`spalten`, CONSTRAINT `BoardsIdConstraint` FOREIGN KEY (`BoardsId`) REFERENCES `boards` (`Id`)) in C:\xampp\htdocs\wd24\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\wd24\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `sp...', 0)
+#1 C:\xampp\htdocs\wd24\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `sp...')
+#2 C:\xampp\htdocs\wd24\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `sp...')
+#3 C:\xampp\htdocs\wd24\system\Database\BaseBuilder.php(2302): CodeIgniter\Database\BaseConnection->query('INSERT INTO `sp...', Array, false)
+#4 C:\xampp\htdocs\wd24\app\Models\TableModel.php(69): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\wd24\app\Controllers\Spalten.php(61): App\Models\TableModel->postSpalten_New()
+#6 C:\xampp\htdocs\wd24\system\CodeIgniter.php(941): App\Controllers\Spalten->postNew()
+#7 C:\xampp\htdocs\wd24\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Spalten))
+#8 C:\xampp\htdocs\wd24\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\wd24\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2024-01-31 16:44:06 --> CodeIgniter\Database\Exceptions\DatabaseException: Cannot add or update a child row: a foreign key constraint fails (`db_team18`.`spalten`, CONSTRAINT `BoardsIdConstraint` FOREIGN KEY (`BoardsId`) REFERENCES `boards` (`Id`))
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2302): CodeIgniter\Database\BaseConnection->query('INSERT INTO `spalten` (`SortId`, `Spalte`, `Spaltenbeschreibung`) VALUES (:SortId:, :Spalte:, :Spaltenbeschreibung:)', [...], false)
+ 2 APPPATH\Models\TableModel.php(69): CodeIgniter\Database\BaseBuilder->insert()
+ 3 APPPATH\Controllers\Spalten.php(61): App\Models\TableModel->postSpalten_New()
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Spalten->postNew()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Spalten))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-01-31 16:44:06 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Cannot add or update a child row: a foreign key constraint fails (`db_team18`.`spalten`, CONSTRAINT `BoardsIdConstraint` FOREIGN KEY (`BoardsId`) REFERENCES `boards` (`Id`))
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `spalten` (`SortId`, `Spalte`, `Spaltenbeschreibung`) VALUES (\'10\', \'Bitte ausfüllen\', \'Bitte ausfüllen            \')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `spalten` (`SortId`, `Spalte`, `Spaltenbeschreibung`) VALUES (\'10\', \'Bitte ausfüllen\', \'Bitte ausfüllen            \')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2302): CodeIgniter\Database\BaseConnection->query('INSERT INTO `spalten` (`SortId`, `Spalte`, `Spaltenbeschreibung`) VALUES (:SortId:, :Spalte:, :Spaltenbeschreibung:)', [...], false)
+ 4 APPPATH\Models\TableModel.php(69): CodeIgniter\Database\BaseBuilder->insert()
+ 5 APPPATH\Controllers\Spalten.php(61): App\Models\TableModel->postSpalten_New()
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Spalten->postNew()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Spalten))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-01-31 16:44:06 --> [Caused by] mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`db_team18`.`spalten`, CONSTRAINT `BoardsIdConstraint` FOREIGN KEY (`BoardsId`) REFERENCES `boards` (`Id`))
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `spalten` (`SortId`, `Spalte`, `Spaltenbeschreibung`) VALUES (\'10\', \'Bitte ausfüllen\', \'Bitte ausfüllen            \')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `spalten` (`SortId`, `Spalte`, `Spaltenbeschreibung`) VALUES (\'10\', \'Bitte ausfüllen\', \'Bitte ausfüllen            \')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `spalten` (`SortId`, `Spalte`, `Spaltenbeschreibung`) VALUES (\'10\', \'Bitte ausfüllen\', \'Bitte ausfüllen            \')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2302): CodeIgniter\Database\BaseConnection->query('INSERT INTO `spalten` (`SortId`, `Spalte`, `Spaltenbeschreibung`) VALUES (:SortId:, :Spalte:, :Spaltenbeschreibung:)', [...], false)
+ 5 APPPATH\Models\TableModel.php(69): CodeIgniter\Database\BaseBuilder->insert()
+ 6 APPPATH\Controllers\Spalten.php(61): App\Models\TableModel->postSpalten_New()
+ 7 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Spalten->postNew()
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Spalten))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-01-31 16:47:40 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`db_team18`.`spalten`, CONSTRAINT `BoardsIdConstraint` FOREIGN KEY (`BoardsId`) REFERENCES `boards` (`Id`)) in C:\xampp\htdocs\wd24\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\wd24\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `sp...', 0)
+#1 C:\xampp\htdocs\wd24\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `sp...')
+#2 C:\xampp\htdocs\wd24\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `sp...')
+#3 C:\xampp\htdocs\wd24\system\Database\BaseBuilder.php(2302): CodeIgniter\Database\BaseConnection->query('INSERT INTO `sp...', Array, false)
+#4 C:\xampp\htdocs\wd24\app\Models\TableModel.php(69): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\wd24\app\Controllers\Spalten.php(61): App\Models\TableModel->postSpalten_New()
+#6 C:\xampp\htdocs\wd24\system\CodeIgniter.php(941): App\Controllers\Spalten->postNew()
+#7 C:\xampp\htdocs\wd24\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Spalten))
+#8 C:\xampp\htdocs\wd24\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\wd24\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2024-01-31 16:47:40 --> CodeIgniter\Database\Exceptions\DatabaseException: Cannot add or update a child row: a foreign key constraint fails (`db_team18`.`spalten`, CONSTRAINT `BoardsIdConstraint` FOREIGN KEY (`BoardsId`) REFERENCES `boards` (`Id`))
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2302): CodeIgniter\Database\BaseConnection->query('INSERT INTO `spalten` (`SortId`, `Spalte`, `Spaltenbeschreibung`) VALUES (:SortId:, :Spalte:, :Spaltenbeschreibung:)', [...], false)
+ 2 APPPATH\Models\TableModel.php(69): CodeIgniter\Database\BaseBuilder->insert()
+ 3 APPPATH\Controllers\Spalten.php(61): App\Models\TableModel->postSpalten_New()
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Spalten->postNew()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Spalten))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-01-31 16:47:40 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Cannot add or update a child row: a foreign key constraint fails (`db_team18`.`spalten`, CONSTRAINT `BoardsIdConstraint` FOREIGN KEY (`BoardsId`) REFERENCES `boards` (`Id`))
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `spalten` (`SortId`, `Spalte`, `Spaltenbeschreibung`) VALUES (\'10\', \'Bitte ausfüllen\', \'Bitte ausfüllen            \')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `spalten` (`SortId`, `Spalte`, `Spaltenbeschreibung`) VALUES (\'10\', \'Bitte ausfüllen\', \'Bitte ausfüllen            \')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2302): CodeIgniter\Database\BaseConnection->query('INSERT INTO `spalten` (`SortId`, `Spalte`, `Spaltenbeschreibung`) VALUES (:SortId:, :Spalte:, :Spaltenbeschreibung:)', [...], false)
+ 4 APPPATH\Models\TableModel.php(69): CodeIgniter\Database\BaseBuilder->insert()
+ 5 APPPATH\Controllers\Spalten.php(61): App\Models\TableModel->postSpalten_New()
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Spalten->postNew()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Spalten))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-01-31 16:47:40 --> [Caused by] mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`db_team18`.`spalten`, CONSTRAINT `BoardsIdConstraint` FOREIGN KEY (`BoardsId`) REFERENCES `boards` (`Id`))
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `spalten` (`SortId`, `Spalte`, `Spaltenbeschreibung`) VALUES (\'10\', \'Bitte ausfüllen\', \'Bitte ausfüllen            \')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `spalten` (`SortId`, `Spalte`, `Spaltenbeschreibung`) VALUES (\'10\', \'Bitte ausfüllen\', \'Bitte ausfüllen            \')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `spalten` (`SortId`, `Spalte`, `Spaltenbeschreibung`) VALUES (\'10\', \'Bitte ausfüllen\', \'Bitte ausfüllen            \')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2302): CodeIgniter\Database\BaseConnection->query('INSERT INTO `spalten` (`SortId`, `Spalte`, `Spaltenbeschreibung`) VALUES (:SortId:, :Spalte:, :Spaltenbeschreibung:)', [...], false)
+ 5 APPPATH\Models\TableModel.php(69): CodeIgniter\Database\BaseBuilder->insert()
+ 6 APPPATH\Controllers\Spalten.php(61): App\Models\TableModel->postSpalten_New()
+ 7 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Spalten->postNew()
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Spalten))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-01-31 17:11:51 --> ArgumentCountError: Too few arguments to function App\Controllers\Boards::getEdit(), 0 passed in C:\xampp\htdocs\wd24\system\CodeIgniter.php on line 941 and exactly 1 expected
+in APPPATH\Controllers\Boards.php on line 18.
+ 1 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Boards->getEdit()
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Boards))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-01-31 17:12:11 --> ArgumentCountError: Too few arguments to function App\Controllers\Boards::getEdit(), 0 passed in C:\xampp\htdocs\wd24\system\CodeIgniter.php on line 941 and exactly 1 expected
+in APPPATH\Controllers\Boards.php on line 18.
+ 1 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Boards->getEdit()
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Boards))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-01-31 17:12:14 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "templates/ced_board.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('templates/ced_board.php')
+ 2 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('templates/ced_board', [], true)
+ 3 APPPATH\Controllers\Boards.php(25): view('templates/ced_board', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Boards->getEdit(0)
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Boards))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-01-31 17:18:59 --> ArgumentCountError: Too few arguments to function App\Controllers\Boards::getEdit(), 0 passed in C:\xampp\htdocs\wd24\system\CodeIgniter.php on line 941 and exactly 1 expected
+in APPPATH\Controllers\Boards.php on line 18.
+ 1 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Boards->getEdit()
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Boards))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-01-31 17:24:44 --> ErrorException: Undefined variable $spalte
+in APPPATH\Views\templates\abbrechenButton.php on line 2.
+ 1 APPPATH\Views\templates\abbrechenButton.php(2): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $spalte', 'C:\\xampp\\htdocs\\wd24\\app\\Views\\templates\\abbrechenButton.php', 2)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\wd24\\app\\Views\\templates\\abbrechenButton.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('templates/abbrechenButton', [], true)
+ 5 APPPATH\Views\templates\ced_board.php(38): view('templates/abbrechenButton')
+ 6 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\wd24\\app\\Views\\templates\\ced_board.php')
+ 7 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('templates/ced_board', [], true)
+ 9 APPPATH\Controllers\Boards.php(25): view('templates/ced_board', [...])
+10 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Boards->getEdit(1)
+11 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Boards))
+12 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-01-31 17:24:57 --> ErrorException: Undefined variable $spalte
+in APPPATH\Views\templates\abbrechenButton.php on line 2.
+ 1 APPPATH\Views\templates\abbrechenButton.php(2): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $spalte', 'C:\\xampp\\htdocs\\wd24\\app\\Views\\templates\\abbrechenButton.php', 2)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\wd24\\app\\Views\\templates\\abbrechenButton.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('templates/abbrechenButton', [], true)
+ 5 APPPATH\Views\templates\ced_board.php(38): view('templates/abbrechenButton')
+ 6 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\wd24\\app\\Views\\templates\\ced_board.php')
+ 7 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('templates/ced_board', [], true)
+ 9 APPPATH\Controllers\Boards.php(25): view('templates/ced_board', [...])
+10 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Boards->getEdit(1)
+11 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Boards))
+12 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-01-31 17:27:26 --> ErrorException: Undefined array key "board"
+in APPPATH\Models\TableModel.php on line 73.
+ 1 APPPATH\Models\TableModel.php(73): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "board"', 'C:\\xampp\\htdocs\\wd24\\app\\Models\\TableModel.php', 73)
+ 2 APPPATH\Controllers\Boards.php(61): App\Models\TableModel->postBoard_New()
+ 3 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Boards->postNew()
+ 4 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Boards))
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-01-31 17:52:44 --> ErrorException: Undefined array key "boardsId"
+in APPPATH\Models\TableModel.php on line 93.
+ 1 APPPATH\Models\TableModel.php(93): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "boardsId"', 'C:\\xampp\\htdocs\\wd24\\app\\Models\\TableModel.php', 93)
+ 2 APPPATH\Controllers\Boards.php(32): App\Models\TableModel->delBoard('1')
+ 3 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Boards->getDelete('1')
+ 4 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Boards))
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-01-31 17:53:08 --> ErrorException: Undefined array key "id"
+in APPPATH\Models\TableModel.php on line 94.
+ 1 APPPATH\Models\TableModel.php(94): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id"', 'C:\\xampp\\htdocs\\wd24\\app\\Models\\TableModel.php', 94)
+ 2 APPPATH\Controllers\Boards.php(32): App\Models\TableModel->delBoard('1')
+ 3 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Boards->getDelete('1')
+ 4 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Boards))
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-01-31 17:53:20 --> mysqli_sql_exception: Cannot delete or update a parent row: a foreign key constraint fails (`db_team18`.`tasks`, CONSTRAINT `SpaltenIdConstraint` FOREIGN KEY (`Spaltenid`) REFERENCES `spalten` (`Id`)) in C:\xampp\htdocs\wd24\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\wd24\system\Database\MySQLi\Connection.php(306): mysqli->query('DELETE FROM `sp...', 0)
+#1 C:\xampp\htdocs\wd24\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('DELETE FROM `sp...')
+#2 C:\xampp\htdocs\wd24\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('DELETE FROM `sp...')
+#3 C:\xampp\htdocs\wd24\system\Database\BaseBuilder.php(2782): CodeIgniter\Database\BaseConnection->query('DELETE FROM `sp...', Array, false)
+#4 C:\xampp\htdocs\wd24\app\Models\TableModel.php(100): CodeIgniter\Database\BaseBuilder->delete()
+#5 C:\xampp\htdocs\wd24\app\Controllers\Boards.php(32): App\Models\TableModel->delBoard('1')
+#6 C:\xampp\htdocs\wd24\system\CodeIgniter.php(941): App\Controllers\Boards->getDelete('1')
+#7 C:\xampp\htdocs\wd24\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Boards))
+#8 C:\xampp\htdocs\wd24\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\wd24\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2024-01-31 17:53:20 --> CodeIgniter\Database\Exceptions\DatabaseException: Cannot delete or update a parent row: a foreign key constraint fails (`db_team18`.`tasks`, CONSTRAINT `SpaltenIdConstraint` FOREIGN KEY (`Spaltenid`) REFERENCES `spalten` (`Id`))
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2782): CodeIgniter\Database\BaseConnection->query('DELETE FROM `spalten`
+WHERE `boardsId` = :boardsId:', [...], false)
+ 2 APPPATH\Models\TableModel.php(100): CodeIgniter\Database\BaseBuilder->delete()
+ 3 APPPATH\Controllers\Boards.php(32): App\Models\TableModel->delBoard('1')
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Boards->getDelete('1')
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Boards))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-01-31 17:53:20 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Cannot delete or update a parent row: a foreign key constraint fails (`db_team18`.`tasks`, CONSTRAINT `SpaltenIdConstraint` FOREIGN KEY (`Spaltenid`) REFERENCES `spalten` (`Id`))
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('DELETE FROM `spalten`
+WHERE `boardsId` = \'1\'')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('DELETE FROM `spalten`
+WHERE `boardsId` = \'1\'')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2782): CodeIgniter\Database\BaseConnection->query('DELETE FROM `spalten`
+WHERE `boardsId` = :boardsId:', [...], false)
+ 4 APPPATH\Models\TableModel.php(100): CodeIgniter\Database\BaseBuilder->delete()
+ 5 APPPATH\Controllers\Boards.php(32): App\Models\TableModel->delBoard('1')
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Boards->getDelete('1')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Boards))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-01-31 17:53:20 --> [Caused by] mysqli_sql_exception: Cannot delete or update a parent row: a foreign key constraint fails (`db_team18`.`tasks`, CONSTRAINT `SpaltenIdConstraint` FOREIGN KEY (`Spaltenid`) REFERENCES `spalten` (`Id`))
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('DELETE FROM `spalten`
+WHERE `boardsId` = \'1\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('DELETE FROM `spalten`
+WHERE `boardsId` = \'1\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('DELETE FROM `spalten`
+WHERE `boardsId` = \'1\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2782): CodeIgniter\Database\BaseConnection->query('DELETE FROM `spalten`
+WHERE `boardsId` = :boardsId:', [...], false)
+ 5 APPPATH\Models\TableModel.php(100): CodeIgniter\Database\BaseBuilder->delete()
+ 6 APPPATH\Controllers\Boards.php(32): App\Models\TableModel->delBoard('1')
+ 7 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Boards->getDelete('1')
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Boards))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-01-31 20:05:21 --> Error connecting to the database: mysqli_sql_exception: Es konnte keine Verbindung hergestellt werden, da der Zielcomputer die Verbindung verweigerte in C:\xampp\htdocs\wd24\system\Database\MySQLi\Connection.php:185
+Stack trace:
+#0 C:\xampp\htdocs\wd24\system\Database\MySQLi\Connection.php(185): mysqli->real_connect('localhost', 'root', '', 'db_team18', 3306, '', 0)
+#1 C:\xampp\htdocs\wd24\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp\htdocs\wd24\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp\htdocs\wd24\app\Models\TableModel.php(53): CodeIgniter\Database\BaseConnection->query('SELECT spalten....')
+#4 C:\xampp\htdocs\wd24\app\Controllers\Spalten.php(21): App\Models\TableModel->get1Spalte(3)
+#5 C:\xampp\htdocs\wd24\system\CodeIgniter.php(941): App\Controllers\Spalten->getEdit(3)
+#6 C:\xampp\htdocs\wd24\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Spalten))
+#7 C:\xampp\htdocs\wd24\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\wd24\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#9 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Es konnte keine Verbindung hergestellt werden, da der Zielcomputer die Verbindung verweigerte in C:\xampp\htdocs\wd24\system\Database\MySQLi\Connection.php:229
+Stack trace:
+#0 C:\xampp\htdocs\wd24\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\wd24\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\wd24\app\Models\TableModel.php(53): CodeIgniter\Database\BaseConnection->query('SELECT spalten....')
+#3 C:\xampp\htdocs\wd24\app\Controllers\Spalten.php(21): App\Models\TableModel->get1Spalte(3)
+#4 C:\xampp\htdocs\wd24\system\CodeIgniter.php(941): App\Controllers\Spalten->getEdit(3)
+#5 C:\xampp\htdocs\wd24\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Spalten))
+#6 C:\xampp\htdocs\wd24\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\wd24\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2024-01-31 20:05:21 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Es konnte keine Verbindung hergestellt werden, da der Zielcomputer die Verbindung verweigerte
+in SYSTEMPATH\Database\BaseConnection.php on line 428.
+ 1 SYSTEMPATH\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+ 2 APPPATH\Models\TableModel.php(53): CodeIgniter\Database\BaseConnection->query('SELECT spalten.* FROM spalten WHERE spalten.Id = 3')
+ 3 APPPATH\Controllers\Spalten.php(21): App\Models\TableModel->get1Spalte(3)
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Spalten->getEdit(3)
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Spalten))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-01-31 20:05:28 --> Error connecting to the database: mysqli_sql_exception: Es konnte keine Verbindung hergestellt werden, da der Zielcomputer die Verbindung verweigerte in C:\xampp\htdocs\wd24\system\Database\MySQLi\Connection.php:185
+Stack trace:
+#0 C:\xampp\htdocs\wd24\system\Database\MySQLi\Connection.php(185): mysqli->real_connect('localhost', 'root', '', 'db_team18', 3306, '', 0)
+#1 C:\xampp\htdocs\wd24\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp\htdocs\wd24\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp\htdocs\wd24\app\Models\TableModel.php(26): CodeIgniter\Database\BaseConnection->query('SELECT spalten....')
+#4 C:\xampp\htdocs\wd24\app\Controllers\Spalten.php(12): App\Models\TableModel->getSpalten()
+#5 C:\xampp\htdocs\wd24\system\CodeIgniter.php(941): App\Controllers\Spalten->getSpalten()
+#6 C:\xampp\htdocs\wd24\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Spalten))
+#7 C:\xampp\htdocs\wd24\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\wd24\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#9 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Es konnte keine Verbindung hergestellt werden, da der Zielcomputer die Verbindung verweigerte in C:\xampp\htdocs\wd24\system\Database\MySQLi\Connection.php:229
+Stack trace:
+#0 C:\xampp\htdocs\wd24\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\wd24\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\wd24\app\Models\TableModel.php(26): CodeIgniter\Database\BaseConnection->query('SELECT spalten....')
+#3 C:\xampp\htdocs\wd24\app\Controllers\Spalten.php(12): App\Models\TableModel->getSpalten()
+#4 C:\xampp\htdocs\wd24\system\CodeIgniter.php(941): App\Controllers\Spalten->getSpalten()
+#5 C:\xampp\htdocs\wd24\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Spalten))
+#6 C:\xampp\htdocs\wd24\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\wd24\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2024-01-31 20:05:28 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Es konnte keine Verbindung hergestellt werden, da der Zielcomputer die Verbindung verweigerte
+in SYSTEMPATH\Database\BaseConnection.php on line 428.
+ 1 SYSTEMPATH\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+ 2 APPPATH\Models\TableModel.php(26): CodeIgniter\Database\BaseConnection->query('SELECT spalten.*, boards.Board FROM spalten JOIN boards ON spalten.BoardsId = boards.Id')
+ 3 APPPATH\Controllers\Spalten.php(12): App\Models\TableModel->getSpalten()
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Spalten->getSpalten()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Spalten))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
