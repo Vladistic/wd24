@@ -34,7 +34,9 @@ class Spalten extends BaseController
     }
     public function postEdit()
     {
-        if ($_SERVER["REQUEST_METHOD"] == "POST") {
+        /*
+         *
+         *if ($_SERVER["REQUEST_METHOD"] == "POST") {
             // Mit $_POST kannst du auf die Daten zugreifen, die durch das POST-Formular übermittelt wurden
             $id = $_POST["Id"];
             $boardsId = $_POST["boardsId"];
@@ -50,6 +52,8 @@ class Spalten extends BaseController
             echo "spaltenbeschreibung: " . $spaltenbeschreibung . "<br>";
 
         }
+        */
+        var_dump($_POST);
     }
 
 
